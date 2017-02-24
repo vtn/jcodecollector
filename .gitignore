@@ -38,3 +38,5 @@ _ReSharper*/
 *.war
 *.ear
 
+/target/
+.DS_Store*
