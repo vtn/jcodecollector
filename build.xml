@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="jCodeCollector" basedir=".">        
+    <import file="CreateRunnableJar.xml"/>
+
+		<property environment="env" />
+
+    <taskdef name="bundleapp"
+             classname="com.oracle.appbundler.AppBundlerTask"   
+             classpath="lib/appbundler/appbundler-1.0.jar" />
+
+    <target name="bundle-jCodeCollector">
+        <bundleapp outputdirectory="target/runnable"
+            name="jCodeCollector"
+            displayname="jCodeCollector"
+            identifier="jcodecollector"
+            mainclassname="jcodecollector.Loader">
+            <runtime dir="${env.JAVA_HOME}" />
+            <classpath file="target/runnable/jCodeCollector.jar" />
+        </bundleapp>
+    </target>
+
+</project>
