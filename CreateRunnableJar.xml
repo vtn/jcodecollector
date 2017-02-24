@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project jcodecollector">
+	<!--this file was created by Eclipse Runnable JAR Export Wizard-->
+	<!--ANT 1.7 is required                                        -->
+	<!--define folder properties-->
+	<property name="dir.buildfile" value="." />
+	<property name="dir.workspace" value="${dir.buildfile}/.." />
+	<property name="dir.jarfile" value="${dir.buildfile}/target/runnable" />
+	<target name="create_run_jar">
+		<jar destfile="${dir.jarfile}/jCodeCollector.jar" filesetmanifest="mergewithoutmain">
+			<manifest>
+				<attribute name="Main-Class" value="jcodecollector.Loader" />
+				<attribute name="Class-Path" value="." />
+			</manifest>
+			<fileset dir="${dir.buildfile}/target/classes" includes="**" />
+			<zipfileset excludes="META-INF/*.SF" src="/Users/vdtn/.m2/repository/com/fifesoft/rsyntaxtextarea/1.4.1/rsyntaxtextarea-1.4.1.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="/Users/vdtn/.m2/repository/org/jopendocument/jdom/1.1.1/jdom-1.1.1.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/mac_widgets-0.10.0/MacWidgets.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="/Users/vdtn/.m2/repository/org/apache/derby/derby/10.10.1.1/derby-10.10.1.1.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="/Users/vdtn/.m2/repository/com/jgoodies/forms/1.2.1/forms-1.2.1.jar" />
+		</jar>
+	</target>
+</project>
