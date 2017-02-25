@@ -13,7 +13,8 @@
             name="jCodeCollector"
             displayname="jCodeCollector"
             identifier="jcodecollector"
-            mainclassname="jcodecollector.Loader">
+            mainclassname="jcodecollector.Loader"
+            icon="jcc.icns">
             <runtime dir="${env.JAVA_HOME}" />
             <classpath file="target/runnable/jCodeCollector.jar" />
         </bundleapp>
